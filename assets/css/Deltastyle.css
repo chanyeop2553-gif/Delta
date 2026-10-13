@@ -1,8 +1,16 @@
 /* layout */
 #header {
+    width: 100%;
     background-color: #001932;
+    box-shadow: 0 5px 5px #00000060;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all 1s;
 }
 #banner_bg {
+    padding-top: 63px;
 }
 #main {
     margin-top: 50px;
@@ -18,6 +26,53 @@
     margin: 0 auto;
     /* background-color: #ffffff73; */
 }
+
+/* 모바일 내비 시작 */
+#nNav {
+    display: none;
+}
+#nNav button {
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+}
+#nNav button i.fa-bars {
+    color: #fff;
+    font-size: 30px;
+}
+#nNav nav {
+    position: fixed;
+    left: 0;
+    top: 63px;
+    z-index: 999;
+
+    background-color: rgb(255, 0, 0);
+    width: 50%;
+
+    box-sizing: border-box;
+
+    transform: translateX(-100%);
+}
+#nNav nav.show {
+    transform: translateX(0);
+}
+
+#nNav nav ul {
+    padding: 10px;
+    border-bottom: 1px solid rgb(255, 0, 0);
+}
+#nNav nav ul:last-child {
+    border: 0;
+}
+#nNav nav ul li {
+    margin-bottom: 10px;
+}
+#nNav nav ul li a {
+    color: #fff;
+}
+/* 모바일 내비 끝 */
 
 /* header */
 .header_inner {
@@ -102,6 +157,21 @@
     background-color: #750202;
     color: #fff;
 }
+
+/* 헤더 스크롤 */
+#header.active {
+    background-color: rgba(0, 25, 50, 0.7);
+    backdrop-filter: blur(10px);
+}
+/* #header.active.nav ul.gnb li a {
+    color: yellow;
+}
+#header.active.nav ul.lnb li a {
+    color: green;
+}
+#header.active .logo svg path {
+    fill: #000;
+} */
 
 /* banner*/
 #banner {
