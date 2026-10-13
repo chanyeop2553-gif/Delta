@@ -10,6 +10,11 @@ $(window).scroll(function () {
     }
 });
 
+if (scrollTop >= 800) {
+    $(".top").addClass("show");
+    $(".top").removeClass("show");
+}
+
 //모바일 메뉴
 $("#nNav button").click(function () {
     $("#nNav nav").toggleClass("show");

@@ -404,3 +404,12 @@ ul.footer_sns i {
 ul.footer_sns span {
     padding: 0 3px;
 }
+
+.top {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    color: crimson;
+    font-size: 10%;
+    z-index: 1000;
+}
